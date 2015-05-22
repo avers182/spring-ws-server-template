@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://ws.sav.ru/anamespace"
+           elementFormDefault="unqualified"
+           targetNamespace="http://ws.sav.ru/anamespace">
+
+    <xs:element name="getOlatResourceRequest" type="tns:getOlatResourceRequest"/>
+    <xs:element name="getOlatResourceResponse" type="tns:getOlatResourceResponse"/>
+
+    <xs:complexType name="getOlatResourceRequest">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="getOlatResourceResponse">
+        <xs:sequence>
+            <xs:element name="olatResource" type="tns:olatResource" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="olatResource">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="resid" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+
